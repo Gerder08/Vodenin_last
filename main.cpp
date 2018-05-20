@@ -76,7 +76,10 @@ int main()
 		case '2':{
 		    cout<<"Potrebiteli"<<endl;
 		    cout<<"Kol-vo Potrebiteley n = "; cin>> n;cout<<endl;
-		    //matr.set_matrix();
+		    create_Potr(n,B);
+		    for(int i = 0; i < n; i++){
+                    printf("B[ %d %s",i,"] = " );cin>>B[i];
+            }
             getch();
             f2 = 1;
             break;
