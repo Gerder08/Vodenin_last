@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <conio.h>
 
-#include "Transport.h"
+#include "transport.h"
 //#include "vect.cpp"
 //#include <vector>
 
@@ -17,7 +17,9 @@ transport tran;
 int main()
 {
 	int choice,m, n,f1=0,f2=0, fl=0;
-
+    double *A;
+    double *B;
+    double **C;
 
     //cout<<"n= ";cin >> n;
     //create_matrix(n);
@@ -33,12 +35,7 @@ int main()
 		cout
 			<< "1. Postavschiki" << endl
 			<< "2. Potrebiteli" << endl
-			<< "3. Vyvod dannyh iz matr" << endl
-			<< "4. Vyvod dannyh iz v" << endl
-			<< "5. Factorizaciya matr " << endl
-			<< "6. Detremenant matr" << endl
-			<< "7. SLAE" << endl
-			<< "8. Obr" << endl
+			<< "3. Transportnaya tablica" << endl
 			<< "9. Vyhod" << endl;
 
 		//cin >> sw;
@@ -48,9 +45,6 @@ int main()
 		    cout<<"Postavschiki"<<endl;
 		    cout<<"Kol-vo Postavschikov m = "; cin>> m;cout<<endl;
 		    tran.create_Post(m,A);
-		    for(int i = 0; i < m; i++){
-                    printf("A[ %d %s",i,"] = " );cin>>A[i];
-            }
 		    f1 = 1;
             getch();
             break;
@@ -59,25 +53,17 @@ int main()
 		    cout<<"Potrebiteli"<<endl;
 		    cout<<"Kol-vo Potrebiteley n = "; cin>> n;cout<<endl;
 		    tran.create_Potr(n,B);
-		    for(int i = 0; i < n; i++){
-                    printf("B[ %d %s",i,"] = " );cin>>B[i];
-            }
             getch();
             f2 = 1;
             break;
 		}
-		case 3:{
+		case '3':{
 		    if (f1==0||f2==0){
-                cout<<"Vvedite Potrebiteley i Postaschikov p. 1, 2"
+                cout<<"Vvedite Potrebiteley i Postaschikov p. 1, 2";
 		    }
 		    else{
 		    cout<<"Transportnaya tablica"<<endl;
             tran.create_trtabl(n,m,C);
-            for(int i = 0; i < n; i++){
-                    for(int j = 0; j < n; j++){
-                        cin>>B[i];
-            }
-            }
             fl=1;
 		    }
 		    system("pause");

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1526897611 source:g:\vodenin\vodenin\main.cpp
+	<stdio.h>
+	<tchar.h>
+	<iostream>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<conio.h>
+	"transport.h"
+
+1526897323 g:\vodenin\vodenin\transport.h
+
+1526897442 source:g:\vodenin\vodenin\transport.cpp
+	"transport.h"
+	<fstream>
+	<iostream>
+	<math.h>
+
