@@ -15,26 +15,22 @@ using namespace std;
 
 void create_Post(int m, double *A){
     A = new double[m];
-    //for(int i = 0; i < m; i++){
-    //
-    //}
 }
 
 void create_Potr(int n, double *B){
     B = new double[n];
-    //for(int i = 0; i < m; i++){
-    //
-    //}
 }
 
+void create_trtabl(int n,int m,double *C){
+    C = new double *[m];
+    for(int i = 0; i < m; i++){
+        C[i] = new double[n];
+    }
+}
 int main()
 {
 	int choice,m, n,f1=0,f2=0, fl=0;
-	double *A, *B;
-
-	//double *A;
-	//double *B;
-
+	double *A, *B, *C;
 
 
     //cout<<"n= ";cin >> n;
@@ -57,7 +53,7 @@ int main()
 			<< "6. Detremenant matr" << endl
 			<< "7. SLAE" << endl
 			<< "8. Obr" << endl
-			<< "9.Vyhod" << endl;
+			<< "9. Vyhod" << endl;
 
 		//cin >> sw;
 		switch(choice=getch()){
@@ -83,14 +79,24 @@ int main()
             getch();
             f2 = 1;
             break;
-		}/*
-		case 3:
-		{
-		    cout<<"Vyvod matr"<<endl;
-            matr.get_matrix();
-            system("pause");
-			break;
 		}
+		case 3:{
+		    if (f1==0||f2==0){
+                cout<<"Vvedite Potrebiteley i Postaschikov p. 1, 2"
+		    }
+		    else{
+		    cout<<"Transportnaya tablica"<<endl;
+            create_trtabl(n,m,C);
+            for(int i = 0; i < n; i++){
+                    for(int j = 0; j < n; j++){
+                        cin>>B[i];
+            }
+            }
+            fl=1;
+		    }
+		    system("pause");
+			break;
+		}/*
 		case 4:
 		{
 		    cout<<"Vyvod vector"<<endl;
